@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">uSafeNH</string>
+    <string name="UNH_button">University of New Hampshire</string>
+    <string name="Plymouth_State">Plymouth State University</string>
+    <string name="Saint_Anselm">Saint Anselm College</string>
+    <string name="Keene_State">Keeve State College</string>
 </resources>
