@@ -25,28 +25,28 @@ public class MainActivity extends Activity {
         (findViewById(R.id.UNH_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(R.string.UNH_button);
+                loadUserActivity(ConstantValues.SCHOOL_UNH);
             }
         });
 
         (findViewById(R.id.Keene_State)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(R.string.Keene_State);
+                loadUserActivity(ConstantValues.SCHOOL_KEENE_STATE);
             }
         });
 
         (findViewById(R.id.Plymouth_State)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(R.string.Plymouth_State);
+                loadUserActivity(ConstantValues.SCHOOL_PLYMOUTH_STATE);
             }
         });
 
         (findViewById(R.id.Saint_Anselm)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(R.string.Saint_Anselm);
+                loadUserActivity(ConstantValues.SCHOOL_SAINT_ANSELM);
             }
         });
     }
@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
         Log.d(TAG, "loadUserActivity() called");
         Intent intent = new Intent(this, UserActivity.class);
 
-        intent.putExtra("schoolResourceID", buttonResourceID);
+        intent.putExtra(ConstantValues.SCHOOL_TOKEN, buttonResourceID);
 
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
