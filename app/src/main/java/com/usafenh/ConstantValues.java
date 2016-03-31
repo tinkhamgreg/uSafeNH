@@ -11,7 +11,7 @@ public class ConstantValues {
 
     public static String USER_TOKEN = "userResourceID";
     public static int USER_SELF = R.string.help_now_button;
-    public static int USER_OTHER = 1;
+    public static int USER_OTHER = R.string.help_someone;
     public static int USER_FRIEND= 2;
     public static int USER_FAMILY = 3;
 }

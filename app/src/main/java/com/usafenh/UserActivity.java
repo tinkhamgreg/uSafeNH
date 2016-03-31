@@ -38,26 +38,25 @@ public class UserActivity extends Activity {
                 loadHelpActivity(ConstantValues.USER_SELF);
             }
         });
+
+        (findViewById(R.id.help_someone)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadHelpActivity(ConstantValues.USER_OTHER);
+            }
+        });
     }
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
     public void loadHelpActivity(int buttonResourceID) {
         Log.d(TAG, "loadHelpActivity() called");
         Intent intent = new Intent(this, HelpActivity.class);
-        Log.d(TAG, "1");
 
         intent.putExtra(ConstantValues.SCHOOL_TOKEN, userData.getSchoolID());
-        Log.d(TAG, "2");
-
         intent.putExtra(ConstantValues.USER_TOKEN, buttonResourceID);
-        Log.d(TAG, "3");
-
 
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Log.d(TAG, "4");
 
         startActivity(intent);
-        Log.d(TAG, "5");
-
     }
 }
