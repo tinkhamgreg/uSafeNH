@@ -24,7 +24,7 @@ public class UserActivity extends Activity {
         userData.setSchoolID(myIntent.getIntExtra(ConstantValues.SCHOOL_TOKEN, 0));
 
         //TODO: Set the action bar to have the school name
-//      setTitle(userData.getSchoolID());
+        setTitle(userData.getSchoolID());
 
         setButtonListeners();
     }

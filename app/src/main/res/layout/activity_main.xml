@@ -8,38 +8,77 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.usafenh.MainActivity">
+    tools:context="com.usafenh.MainActivity"
+    android:background="@android:color/white">
 
-    <Button
-        android:layout_centerHorizontal="true"
+
+
+
+
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:id="@+id/UNH_button"
-        android:text="@string/UNH"/>
-
-    <Button
+        android:src="@mipmap/unh_icon"
+        android:background="@android:color/white"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Keene_State"
-        android:text="@string/Keene_State"
-        android:layout_below="@+id/Saint_Anselm"/>
+        android:layout_marginTop="114dp" />
 
-    <Button
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Plymouth_State"
-        android:text="@string/Plymouth_State"
-        android:layout_below="@+id/UNH_button"/>
-
-    <Button
-        android:layout_centerHorizontal="true"
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Saint_Anselm"
-        android:text="@string/Saint_Anselm"
-        android:layout_below="@+id/Plymouth_State"/>
+        android:src="@mipmap/sac"
+        android:background="@android:color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/UNH_button" />
 
-   </RelativeLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Keene_State"
+        android:src="@mipmap/keene"
+        android:background="@android:color/white"
+        android:layout_alignTop="@+id/UNH_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Plymouth_State"
+        android:src="@mipmap/plymouth"
+        android:background="@android:color/white"
+        android:layout_alignTop="@+id/White_Mountain"
+        android:layout_toRightOf="@+id/Saint_Anselm"
+        android:layout_toEndOf="@+id/Saint_Anselm" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/White_Mountain"
+        android:src="@mipmap/wmcc"
+        android:background="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/Keene_State"
+        android:layout_toStartOf="@+id/Keene_State" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What college are you associated with?"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+</RelativeLayout>
 

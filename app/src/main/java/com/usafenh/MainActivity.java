@@ -49,6 +49,13 @@ public class MainActivity extends Activity {
                 loadUserActivity(ConstantValues.SCHOOL_SAINT_ANSELM);
             }
         });
+
+        (findViewById(R.id.White_Mountain)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                loadUserActivity(ConstantValues.SCHOOL_WHITE_MOUNTAIN);
+            }
+        });
     }
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
