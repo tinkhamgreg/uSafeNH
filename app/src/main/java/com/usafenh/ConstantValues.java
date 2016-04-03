@@ -9,9 +9,9 @@ public class ConstantValues {
     public static int SCHOOL_KEENE_STATE = R.string.Keene_State;
     public static int SCHOOL_WHITE_MOUNTAIN =R.string.White_Mountain;
 
-    public static String USER_TOKEN = "userResourceID";
-    public static int USER_SELF = R.string.help_now_button;
-    public static int USER_OTHER = R.string.help_someone;
-    public static int USER_FRIEND= 2;
-    public static int USER_FAMILY = 3;
+    public static String HELP_TYPE_TOKEN = "helpTypeResourceID";
+    public static int CRISIS_CENTERS = R.string.Crisis_centers;
+    public static int LOCAL_POLICE = R.string.Local_police;
+    public static int LOCAL_HOSPITAL = R.string.Local_hospital;
+    public static int CAMPUS_RESOURCES = R.string.Campus_resources;
 }

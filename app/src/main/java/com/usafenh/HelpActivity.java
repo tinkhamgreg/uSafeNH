@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.view.View;
 
 public class HelpActivity extends Activity {
 
@@ -20,13 +18,60 @@ public class HelpActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        Intent myIntent = getIntent();
+        Intent myIntent = getIntent(); // gets the previously created intent
         userData = new UserData();
+        // Retrieve the school id from the intent
         userData.setSchoolID(myIntent.getIntExtra(ConstantValues.SCHOOL_TOKEN, 0));
-        userData.setUserType(myIntent.getIntExtra(ConstantValues.USER_TOKEN, 0));
 
-        // TODO: Remove this line, because this is just used for debugging purposes
-        ((TextView) findViewById(R.id.selected_info_text)).setText("Selected school: " +
-                userData.getSchoolName(this) + "\nSelected User: " + userData.getUserString(this));
+        //TODO: Set the action bar to have the school name
+        setTitle(userData.getSchoolID());
+
+        setButtonListeners();
+    }
+
+    private void setButtonListeners() {
+        Log.d(TAG, "setButtonListeners() called");
+
+        (findViewById(R.id.Crisis_centers)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadTestActivity(ConstantValues.CRISIS_CENTERS);
+            }
+        });
+
+        (findViewById(R.id.Local_police)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadTestActivity(ConstantValues.LOCAL_POLICE);
+            }
+        });
+
+        (findViewById(R.id.Local_hospital)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadTestActivity(ConstantValues.LOCAL_HOSPITAL);
+            }
+        });
+
+        (findViewById(R.id.Campus_resources)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadTestActivity(ConstantValues.CAMPUS_RESOURCES);
+            }
+        });
+    }
+
+    // Currently using buttonResourceID to have something to determine which button was pressed.
+    public void loadTestActivity(int buttonResourceID) {
+        //TODO: Display the correct help information.  Might just be a popup instead of a new Activity.
+        Log.d(TAG, "loadTestActivity() called");
+        Intent intent = new Intent(this, TestActivity.class);
+
+        intent.putExtra(ConstantValues.SCHOOL_TOKEN, userData.getSchoolID());
+        intent.putExtra(ConstantValues.HELP_TYPE_TOKEN, buttonResourceID);
+
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(intent);
     }
 }
