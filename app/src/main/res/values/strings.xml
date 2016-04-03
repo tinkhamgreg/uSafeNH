@@ -6,7 +6,10 @@
     <string name="Saint_Anselm">Saint Anselm College</string>
     <string name="Keene_State">Keene State College</string>
     <string name="White_Mountain">White Mountain Community College</string>
-
+    <string name="Local_police">Local Police</string>
+    <string name="Campus_resources">Campus Resources</string>
+    <string name="Local_hospital">Local Hospitals</string>
+    <string name="Crisis_centers">Crisis Centers</string>
     <string name="help_now_button">Get Help Now</string>
     <string name="help_someone">Help Someone You Know</string>
 
