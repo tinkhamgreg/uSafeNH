@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gtink.myapplication.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.usafenh.MainActivity"
+        android:background="@android:color/white">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:id="@+id/UNH_button"
+            android:src="@mipmap/unh_icon"
+            android:background="@android:color/white"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="46dp"
+            android:layout_above="@+id/White_Mountain"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="89dp"
+            android:layout_marginEnd="89dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Saint_Anselm"
+            android:src="@mipmap/sac"
+            android:background="@android:color/white"
+            android:layout_below="@+id/UNH_button"
+            android:layout_alignLeft="@+id/Keene_State"
+            android:layout_alignStart="@+id/Keene_State" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Keene_State"
+            android:src="@mipmap/keene"
+            android:background="@android:color/white"
+            android:layout_alignTop="@+id/UNH_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/White_Mountain"
+            android:src="@mipmap/wmcc"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/UNH_button"
+            android:layout_alignStart="@+id/UNH_button"
+            android:layout_marginBottom="52dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/Keene_State"
+            android:layout_alignStart="@+id/Keene_State"
+            android:layout_alignRight="@+id/UNH_button"
+            android:layout_alignEnd="@+id/UNH_button"
+            android:layout_above="@+id/UNH_button" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
