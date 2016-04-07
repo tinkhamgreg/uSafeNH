@@ -4,14 +4,14 @@ import android.content.Context;
 
 public class UserData {
     private int schoolID;
-    private int userType;
+    private int helpType;
 
     public void setSchoolID(int id) {
         schoolID = id;
     }
 
-    public void setUserType(int type) {
-        userType = type;
+    public void setHelpType(int type) {
+        helpType = type;
     }
 
     public int getSchoolID() {
@@ -22,11 +22,11 @@ public class UserData {
         return resourceContext.getResources().getString(schoolID);
     }
 
-    public int getUserType() {
-        return userType;
+    public int getHelpType() {
+        return helpType;
     }
 
-    public String getUserString(Context resourceContext) {
-        return resourceContext.getResources().getString(userType);
+    public String getHelpString(Context resourceContext) {
+        return resourceContext.getResources().getString(helpType);
     }
 }

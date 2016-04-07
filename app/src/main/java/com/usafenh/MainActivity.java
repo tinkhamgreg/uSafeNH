@@ -70,36 +70,36 @@ public class MainActivity extends AppCompatActivity
         (findViewById(R.id.UNH_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(ConstantValues.SCHOOL_UNH);
+                loadHelpActivity(ConstantValues.SCHOOL_UNH);
             }
         });
 
         (findViewById(R.id.Keene_State)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(ConstantValues.SCHOOL_KEENE_STATE);
+                loadHelpActivity(ConstantValues.SCHOOL_KEENE_STATE);
             }
         });
 
         (findViewById(R.id.Saint_Anselm)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadUserActivity(ConstantValues.SCHOOL_SAINT_ANSELM);
+                loadHelpActivity(ConstantValues.SCHOOL_SAINT_ANSELM);
             }
         });
 
         (findViewById(R.id.White_Mountain)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                loadUserActivity(ConstantValues.SCHOOL_WHITE_MOUNTAIN);
+                loadHelpActivity(ConstantValues.SCHOOL_WHITE_MOUNTAIN);
             }
         });
     }
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
-    public void loadUserActivity(int buttonResourceID) {
-        Log.d(TAG, "loadUserActivity() called");
-        Intent intent = new Intent(this, UserActivity.class);
+    public void loadHelpActivity(int buttonResourceID) {
+        Log.d(TAG, "loadTestActivity() called");
+        Intent intent = new Intent(this, HelpActivity.class);
 
         intent.putExtra(ConstantValues.SCHOOL_TOKEN, buttonResourceID);
 
