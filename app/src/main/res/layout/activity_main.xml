@@ -20,66 +20,54 @@
         android:background="@android:color/white">
 
 
-        <ImageButton
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:clickable="false"
             android:id="@+id/UNH_button"
-            android:src="@mipmap/unh_icon"
+            android:drawableTop="@drawable/unh_icon"
             android:background="@android:color/white"
-            android:nestedScrollingEnabled="false"
-            android:layout_marginBottom="46dp"
-            android:layout_above="@+id/White_Mountain"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="89dp"
-            android:layout_marginEnd="89dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Saint_Anselm"
-            android:src="@mipmap/sac"
-            android:background="@android:color/white"
-            android:layout_below="@+id/UNH_button"
-            android:layout_alignLeft="@+id/Keene_State"
-            android:layout_alignStart="@+id/Keene_State" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Keene_State"
-            android:src="@mipmap/keene"
-            android:background="@android:color/white"
-            android:layout_alignTop="@+id/UNH_button"
+            android:text="@string/UNH"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="65dp"
-            android:layout_marginStart="65dp" />
+            android:layout_marginTop="52dp" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Saint_Anselm"
+            android:drawableTop="@drawable/sac"
+            android:background="@android:color/white"
+            android:text="@string/Saint_Anselm"
+            android:layout_alignBottom="@+id/UNH_button"
+            android:layout_toRightOf="@+id/UNH_button"
+            android:layout_toEndOf="@+id/UNH_button" />
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Keene_State"
+            android:drawableTop="@drawable/wmcc"
+            android:background="@android:color/white"
+            android:text="@string/White_Mountain"
+            android:layout_below="@+id/UNH_button"
+            android:layout_toRightOf="@+id/White_Mountain"
+            android:layout_toEndOf="@+id/White_Mountain" />
+
+
+        <Button
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/White_Mountain"
-            android:src="@mipmap/wmcc"
+            android:drawableTop="@drawable/keene"
             android:background="@android:color/white"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/UNH_button"
-            android:layout_alignStart="@+id/UNH_button"
-            android:layout_marginBottom="52dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:src="@mipmap/ic_launcher"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/Keene_State"
-            android:layout_alignStart="@+id/Keene_State"
-            android:layout_alignRight="@+id/UNH_button"
-            android:layout_alignEnd="@+id/UNH_button"
-            android:layout_above="@+id/UNH_button" />
-
+            android:text="@string/Keene_State"
+            android:layout_alignBottom="@+id/Keene_State"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>
