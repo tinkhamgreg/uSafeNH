@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
     public void loadHelpActivity(int buttonResourceID) {
-        Log.d(TAG, "loadTestActivity() called");
+        Log.d(TAG, "loadInfoPopup() called");
         Intent intent = new Intent(this, HelpActivity.class);
 
         intent.putExtra(ConstantValues.SCHOOL_TOKEN, buttonResourceID);
