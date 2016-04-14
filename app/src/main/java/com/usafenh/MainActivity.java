@@ -65,16 +65,12 @@ public class MainActivity extends FragmentActivity
     }
 
     public Fragment getSchoolFragment() {
-        if (schoolFragment == null) {
-            schoolFragment = SchoolFragment.newInstance().newInstance();
-        }
+        schoolFragment = SchoolFragment.newInstance().newInstance();
         return schoolFragment;
     }
 
     public Fragment getHelpFragment() {
-        if (helpFragment == null) {
-            helpFragment = HelpFragment.newInstance().newInstance();
-        }
+        helpFragment = HelpFragment.newInstance().newInstance();
         return helpFragment;
     }
 
@@ -134,15 +130,15 @@ public class MainActivity extends FragmentActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        UserData userData = new UserData();
-        userData.setSchoolID(ConstantValues.SCHOOL_UNH);
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_school_selection) {
-
+            setFragment(getSchoolFragment());
         } else if (id == R.id.nav_school_resources) {
-            loadHelpActivity(userData.getSchoolID());
+            if (userData.getSchoolID() > 0) {
+                setFragment(getHelpFragment());
+            }
         } else if (id == R.id.nav_faq) {
 
         }  else if (id == R.id.nav_help_now) {

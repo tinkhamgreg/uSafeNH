@@ -37,22 +37,22 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/Keene_State"
+        android:id="@+id/White_Mountain"
         android:drawableTop="@drawable/wmcc"
         android:background="@android:color/white"
         android:text="@string/White_Mountain"
         android:layout_below="@+id/UNH_button"
-        android:layout_toRightOf="@+id/White_Mountain"
-        android:layout_toEndOf="@+id/White_Mountain" />
+        android:layout_toRightOf="@+id/Keene_State"
+        android:layout_toEndOf="@+id/Keene_State" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/White_Mountain"
+        android:id="@+id/Keene_State"
         android:drawableTop="@drawable/keene"
         android:background="@android:color/white"
         android:text="@string/Keene_State"
-        android:layout_alignBottom="@+id/Keene_State"
+        android:layout_alignBottom="@+id/White_Mountain"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
