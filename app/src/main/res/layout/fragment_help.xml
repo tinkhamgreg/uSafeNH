@@ -13,7 +13,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgrounddots"
+    android:background="#E0E0E0"
 
 
     >
@@ -26,7 +26,8 @@
 
         android:id="@+id/Crisis_centers"
         android:text="@string/Crisis_centers"
-        android:padding="10dp"
+        android:drawableTop="@drawable/crisis_center"
+        android:padding="15dp"
         android:layout_width="150dp"
         android:layout_height="125dp"
         android:background="@drawable/roundedbutton"
@@ -37,7 +38,7 @@
         android:id="@+id/Local_hospital"
         android:text="@string/Local_hospital"
         android:drawableTop="@drawable/hospital2"
-        android:padding="10dp"
+        android:padding="15dp"
         android:layout_width="150dp"
         android:layout_height="125dp"
         android:background="@drawable/roundedbutton"
@@ -49,6 +50,7 @@
     <Button
         android:background = "@drawable/roundedbutton"
         android:id="@+id/Campus_resources"
+        android:drawableTop="@drawable/campus_resources"
         android:text="@string/Campus_resources"
         android:padding="10dp"
         android:layout_width="150dp"
@@ -62,7 +64,7 @@
         android:id="@+id/Local_police"
         android:text="@string/Local_police"
         android:drawableTop="@drawable/police2"
-        android:padding="10dp"
+        android:padding="25dp"
         android:layout_width="150dp"
         android:layout_height="125dp"
         android:layout_marginLeft="16dp"
@@ -70,10 +72,23 @@
         android:background="@drawable/roundedbutton"
         android:layout_toEndOf="@id/Campus_resources"
         android:layout_below="@id/Crisis_centers"
-        android:layout_toRightOf="@id/Campus_resources"
+        android:layout_toRightOf="@id/Campus_resources"/>
 
-        />
+    <Button
+        android:id="@+id/faq"
+        android:text="@string/faq"
+        android:padding="25dp"
+        android:layout_width="315dp"
+        android:layout_height="70dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_below="@+id/Campus_resources"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+
 </RelativeLayout>
+
 
     <FrameLayout
         android:layout_width="match_parent"
