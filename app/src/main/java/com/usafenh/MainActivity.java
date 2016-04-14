@@ -51,11 +51,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
-
-
-
-
     private void setButtonListeners() {
         Log.d(TAG, "setButtonListeners() called");
 
@@ -130,25 +125,33 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+    public void AppExit()
+    {
 
+        this.finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        UserData userData = new UserData();
+        userData.setSchoolID(ConstantValues.SCHOOL_UNH);
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_school_selection) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_school_resources) {
+            loadHelpActivity(userData.getSchoolID());
+        } else if (id == R.id.nav_faq) {
 
-        } else if (id == R.id.nav_manage) {
+        }  else if (id == R.id.nav_help_now) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_exit) {
+            AppExit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
