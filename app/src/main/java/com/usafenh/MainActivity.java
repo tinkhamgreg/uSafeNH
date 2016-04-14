@@ -1,8 +1,12 @@
 package com.usafenh;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
@@ -21,24 +25,34 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import java.util.UUID;
+
+public class MainActivity extends FragmentActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
-
     private static final String TAG = "MainActivity";
-    private ArrayAdapter<String> mAdapter;
 
+    private FragmentManager fragmentMgr;
+    private SchoolFragment schoolFragment;
+    private HelpFragment helpFragment;
+
+    private UserData userData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate() called");
+        userData = new UserData();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_fragment);
 
-        setButtonListeners();
+        fragmentMgr = getSupportFragmentManager();
+        Fragment fragment = fragmentMgr.findFragmentById(R.id.fragment_container);
+
+        if (fragment == null) {
+            setFragment(getSchoolFragment());
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,55 +62,33 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
-
-
-
-
-
-    private void setButtonListeners() {
-        Log.d(TAG, "setButtonListeners() called");
-
-        (findViewById(R.id.UNH_button)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadHelpActivity(ConstantValues.SCHOOL_UNH);
-            }
-        });
-
-        (findViewById(R.id.Keene_State)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadHelpActivity(ConstantValues.SCHOOL_KEENE_STATE);
-            }
-        });
-
-        (findViewById(R.id.Saint_Anselm)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadHelpActivity(ConstantValues.SCHOOL_SAINT_ANSELM);
-            }
-        });
-
-        (findViewById(R.id.White_Mountain)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                loadHelpActivity(ConstantValues.SCHOOL_WHITE_MOUNTAIN);
-            }
-        });
+    public Fragment getSchoolFragment() {
+        if (schoolFragment == null) {
+            schoolFragment = SchoolFragment.newInstance().newInstance();
+        }
+        return schoolFragment;
     }
 
-    // Currently using buttonResourceID to have something to determine which button was pressed.
-    public void loadHelpActivity(int buttonResourceID) {
-        Log.d(TAG, "loadInfoPopup() called");
-        Intent intent = new Intent(this, HelpActivity.class);
+    public Fragment getHelpFragment() {
+        if (helpFragment == null) {
+            helpFragment = HelpFragment.newInstance().newInstance();
+        }
+        return helpFragment;
+    }
 
-        intent.putExtra(ConstantValues.SCHOOL_TOKEN, buttonResourceID);
+    public void setFragment(Fragment newFragment) {
+        Log.d(TAG, "setFragment() called");
 
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        fragmentMgr.beginTransaction()
+                .add(R.id.fragment_container, newFragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    public UserData getUserData() {
+        return userData;
     }
 
     @Override
