@@ -3,14 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgrounddots"
 
 
     >
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_centerInParent="true">
+    android:layout_centerInParent="true"
+    android:id="@+id/relativeLayout">
     <Button
         android:id="@+id/Crisis_centers"
         android:text="@string/Crisis_centers"
@@ -60,4 +61,13 @@
 
         />
 </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="472dp"
+        android:layout_marginStart="472dp"></FrameLayout>
 </RelativeLayout>
