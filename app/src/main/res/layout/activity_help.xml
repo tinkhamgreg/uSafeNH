@@ -23,6 +23,7 @@
     android:layout_centerInParent="true"
     android:id="@+id/relativeLayout">
     <Button
+
         android:id="@+id/Crisis_centers"
         android:text="@string/Crisis_centers"
         android:padding="10dp"
@@ -35,6 +36,7 @@
     <Button
         android:id="@+id/Local_hospital"
         android:text="@string/Local_hospital"
+        android:drawableTop="@drawable/hospital2"
         android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="125dp"
@@ -59,6 +61,7 @@
     <Button
         android:id="@+id/Local_police"
         android:text="@string/Local_police"
+        android:drawableTop="@drawable/police2"
         android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="125dp"
@@ -79,7 +82,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="472dp"
-        android:layout_marginStart="472dp"></FrameLayout>
+        android:layout_marginStart="472dp"/>
 </RelativeLayout>
 
 <include
