@@ -2,7 +2,6 @@
     <string name="app_name">uSafeNH</string>
 
     <string name="UNH">University of New Hampshire</string>
-    <string name="Plymouth_State">Plymouth State University</string>
     <string name="Saint_Anselm">Saint Anselm College</string>
     <string name="Keene_State">Keene State College</string>
     <string name="White_Mountain">White Mountain Community College</string>
@@ -21,5 +20,27 @@
     <string name="action_settings">Settings</string>
     <string name="usafe">uSafeNH</string>
     <string name="usafe_website">http://www.nhcadsv.org/</string>
+
+    <string name="Invalid_info">No info found.</string>
+
+    <string name="UNH_Local_police">Local Police</string>
+    <string name="UNH_Campus_resources">Campus Resources</string>
+    <string name="UNH_Local_hospital">Local Hospitals</string>
+    <string name="UNH_Crisis_centers">Crisis Centers</string>
+
+    <string name="Keene_State_Local_police">Local Police</string>
+    <string name="Keene_State_Campus_resources">Campus Resources</string>
+    <string name="Keene_State_Local_hospital">Cheshire Medical Center\nAddress:\n\t\t580 Court St., Keene, NH 03431\nContact:\n\t\t603-354-6600</string>
+    <string name="Keene_State_Crisis_centers">Crisis Centers</string>
+
+    <string name="Saint_Anselm_Local_police">Local Police</string>
+    <string name="Saint_Anselm_Campus_resources">Campus Resources</string>
+    <string name="Saint_Anselm_Local_hospital">Local Hospitals</string>
+    <string name="Saint_Anselm_Crisis_centers">Crisis Centers</string>
+
+    <string name="White_Mountain_Local_police">Local Police</string>
+    <string name="White_Mountain_Campus_resources">Campus Resources</string>
+    <string name="White_Mountain_Local_hospital">Local Hospitals</string>
+    <string name="White_Mountain_Crisis_centers">Crisis Centers</string>
 
 </resources>

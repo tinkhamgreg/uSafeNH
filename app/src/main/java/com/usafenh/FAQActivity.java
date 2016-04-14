@@ -1,6 +1,5 @@
 package com.usafenh;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,10 +10,10 @@ import android.util.Log;
 import android.widget.TextView;
 
 //TODO: Convert this activity into the FAQ Activity
-public class TestActivity extends MainActivity
+public class FAQActivity extends MainActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
-    private static final String TAG = "TestActivity";
+    private static final String TAG = "FAQActivity";
 
     private UserData userData;
 
@@ -22,7 +21,7 @@ public class TestActivity extends MainActivity
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate() called");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_faq);
 
         Intent myIntent = getIntent();
         userData = new UserData();

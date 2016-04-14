@@ -1,6 +1,6 @@
 package com.usafenh;
 
-import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class HelpActivity extends MainActivity
@@ -53,40 +55,60 @@ public class HelpActivity extends MainActivity
         (findViewById(R.id.Crisis_centers)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadTestActivity(ConstantValues.CRISIS_CENTERS);
+                loadInfoPopup(ConstantValues.CRISIS_CENTERS);
             }
         });
 
         (findViewById(R.id.Local_police)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadTestActivity(ConstantValues.LOCAL_POLICE);
+                loadInfoPopup(ConstantValues.LOCAL_POLICE);
             }
         });
 
         (findViewById(R.id.Local_hospital)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadTestActivity(ConstantValues.LOCAL_HOSPITAL);
+                loadInfoPopup(ConstantValues.LOCAL_HOSPITAL);
             }
         });
 
         (findViewById(R.id.Campus_resources)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadTestActivity(ConstantValues.CAMPUS_RESOURCES);
+                loadInfoPopup(ConstantValues.CAMPUS_RESOURCES);
             }
         });
     }
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
-    public void loadTestActivity(int buttonResourceID) {
-        //TODO: Display the correct help information.  Might just be a popup instead of a new Activity.
-        Log.d(TAG, "loadTestActivity() called");
-        Intent intent = new Intent(this, TestActivity.class);
+    public void loadInfoPopup(int buttonResourceID) {
+        Log.d(TAG, "loadInfoPopup() called");
+
+        userData.setHelpType(buttonResourceID);
+
+        final Dialog infoDialog = new Dialog(this);
+
+        infoDialog.setContentView(R.layout.info_popup);
+        infoDialog.setTitle(userData.getHelpType());
+
+        Log.d(TAG, "Info Resource: " + ConstantValues.getInfoReference(userData));
+        ((TextView) infoDialog.findViewById(R.id.info_textView)).setText(ConstantValues.getInfoReference(userData));
+
+        ((Button) infoDialog.findViewById(R.id.cancel_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                infoDialog.dismiss();
+            }
+        });
+
+        infoDialog.show();
+    }
+
+    public void loadFAQActivity() {
+        Intent intent = new Intent(this, FAQActivity.class);
 
         intent.putExtra(ConstantValues.SCHOOL_TOKEN, userData.getSchoolID());
-        intent.putExtra(ConstantValues.HELP_TYPE_TOKEN, buttonResourceID);
 
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
