@@ -35,6 +35,7 @@ public class MainActivity extends FragmentActivity
     private FragmentManager fragmentMgr;
     private SchoolFragment schoolFragment;
     private HelpFragment helpFragment;
+    private FAQFragment faqFragment;
 
     private UserData userData;
 
@@ -72,6 +73,11 @@ public class MainActivity extends FragmentActivity
     public Fragment getHelpFragment() {
         helpFragment = HelpFragment.newInstance().newInstance();
         return helpFragment;
+    }
+
+    public Fragment getFAQFragment() {
+        faqFragment = FAQFragment.newInstance().newInstance();
+        return faqFragment;
     }
 
     public void setFragment(Fragment newFragment) {
@@ -140,7 +146,9 @@ public class MainActivity extends FragmentActivity
                 setFragment(getHelpFragment());
             }
         } else if (id == R.id.nav_faq) {
-
+            if (userData.getSchoolID() > 0) {
+                setFragment(getFAQFragment());
+            }
         }  else if (id == R.id.nav_help_now) {
 
         } else if (id == R.id.nav_exit) {

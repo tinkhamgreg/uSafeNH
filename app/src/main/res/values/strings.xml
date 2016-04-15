@@ -12,6 +12,7 @@
     <string name="help_now_button">Get Help Now</string>
     <string name="help_someone">Help Someone You Know</string>
     <string name="faq">FAQ</string>
+    <string name="faq_self">FAQ for Myself</string>
 
     <string name="details_button">View Details</string>
 
@@ -43,5 +44,10 @@
     <string name="White_Mountain_Campus_resources">Campus Resources</string>
     <string name="White_Mountain_Local_hospital">Local Hospitals</string>
     <string name="White_Mountain_Crisis_centers">Crisis Centers</string>
+
+
+    <!--FAQ Question and Answers-->
+    <string name="q1">Was I sexually assaulted?</string>
+    <string name="a1">The term sexual assault refers to any sexual contact that occurs without explicit consent. Sexual assault can take many forms, but it is never the victim’s fault. Forms of sexual assault include: penetration of the victim’s body (also known as rape), attempted rape, forcing a victim to perform sexual acts, and fondling or unwanted sexual touching.</string>
 
 </resources>

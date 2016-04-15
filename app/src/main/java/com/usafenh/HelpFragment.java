@@ -73,6 +73,13 @@ public class HelpFragment extends Fragment {
                 loadInfoPopup(ConstantValues.CAMPUS_RESOURCES);
             }
         });
+
+        (view.findViewById(R.id.faq)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainActivity.setFragment(mainActivity.getFAQFragment());
+            }
+        });
     }
 
     // Currently using buttonResourceID to have something to determine which button was pressed.
@@ -97,15 +104,5 @@ public class HelpFragment extends Fragment {
         });
 
         infoDialog.show();
-    }
-
-    public void loadFAQActivity() {/*
-        Intent intent = new Intent(this, FAQActivity.class);
-
-        intent.putExtra(ConstantValues.SCHOOL_TOKEN, userData.getSchoolID());
-
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        startActivity(intent);*/
     }
 }
