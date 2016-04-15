@@ -1,116 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:id="@+id/drawer_layout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:fitsSystemWindows="true"-->
-    <!--tools:openDrawer="start">-->
+<!--<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:id="@+id/drawer_layout"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:fitsSystemWindows="true"--><!--tools:openDrawer="start">-->
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E0E0E0"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#E0E0E0"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
 
+    >
 
-        >
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
-            <Button
+    <Button
 
-                android:id="@+id/Crisis_centers"
-                android:text="@string/Crisis_centers"
-                android:drawableLeft="@drawable/crisis_center"
-                android:padding="10dp"
-                android:layout_width="350dp"
-                android:layout_height="70dp"
-                android:background="@drawable/roundedbutton"
+        android:id="@+id/Crisis_centers"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/crisis_center_small"
+        android:drawableStart="@drawable/crisis_center_small"
+        android:padding="5dp"
+        android:text="@string/Crisis_centers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        />
 
-                android:layout_alignParentTop="true"
-                android:layout_alignLeft="@+id/Local_police"
-                android:layout_alignStart="@+id/Local_police" />
+    <Button
+        android:id="@+id/Local_hospital"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/hospital2_small"
+        android:drawableStart="@drawable/hospital2_small"
+        android:padding="10dp"
+        android:text="@string/Local_hospital"
+        android:layout_below="@+id/Crisis_centers"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true" />
 
-            <Button
-                android:id="@+id/Local_hospital"
-                android:text="@string/Local_hospital"
-                android:drawableLeft="@drawable/hospital2"
-                android:padding="10dp"
-                android:layout_width="350dp"
-                android:layout_height="70dp"
-                android:background="@drawable/roundedbutton"
-                android:layout_below="@+id/Crisis_centers"
-                 />
-
-            <Button
-                android:background = "@drawable/roundedbutton"
-                android:id="@+id/Campus_resources"
-                android:drawableLeft="@drawable/campus_resources"
-                android:text="@string/Campus_resources"
-                android:padding="10dp"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-
-                android:layout_below="@+id/Local_hospital"
-  />
-
-            <Button
-                android:id="@+id/Local_police"
-                android:text="@string/Local_police"
-                android:drawableLeft="@drawable/police2"
-                android:padding="15dp"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:background="@drawable/roundedbutton"
-                android:layout_below="@+id/Campus_resources"
-/>
+    <Button
+        android:id="@+id/Campus_resources"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/campus_resources_small"
+        android:drawableStart="@drawable/campus_resources_small"
+        android:padding="10dp"
+        android:text="@string/Campus_resources"
+        android:layout_below="@+id/Local_hospital"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true" />
 
 
-        </RelativeLayout>
-
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignBottom="@+id/relativeLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="472dp"
-            android:layout_marginStart="472dp"/>
+    <Button
+        android:id="@+id/Local_police"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:drawableLeft="@drawable/police_small"
+        android:drawableStart="@drawable/police_small"
+        android:padding="10dp"
+        android:text="@string/Local_police"
+        android:layout_below="@id/Campus_resources"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+         />
 
     <Button
         android:id="@+id/faq"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
         android:text="@string/faq"
-        android:padding="15dp"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
-        android:background="@drawable/roundedbutton"
-        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Local_police"
+        android:layout_margin="10dp"
 
-        android:layout_alignEnd="@+id/relativeLayout"
-        android:layout_marginRight="43dp"
-        android:layout_marginEnd="43dp" />
+         />
+
+
 </RelativeLayout>
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--<include--><!--layout="@layout/app_bar_main"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent" />-->
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+    <!--<android.support.design.widget.NavigationView--><!--android:id="@+id/nav_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_gravity="start"--><!--android:fitsSystemWindows="true"--><!--app:headerLayout="@layout/nav_header_main"--><!--app:menu="@menu/activity_main_drawer" />-->
 
-</android.support.v4.widget.DrawerLayout>
+    <!--</android.support.v4.widget.DrawerLayout>-->
