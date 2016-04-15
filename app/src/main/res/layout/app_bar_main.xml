@@ -41,7 +41,7 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
-w
+
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />

@@ -7,66 +7,67 @@
     android:background="#E0E0E0">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/relativeLayout">
+        android:layout_centerInParent="true">
 
         <Button
             android:id="@+id/Crisis_centers"
-            android:text="@string/Crisis_centers"
-            android:padding="10dp"
             android:layout_width="150dp"
             android:layout_height="125dp"
-            android:background="@drawable/roundedbutton"
-            android:layout_marginRight="16dp" />
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_button"
+            android:drawableTop="@drawable/crisis_center"
+            android:padding="15dp"
+            android:text="@string/Crisis_centers" />
 
         <Button
             android:id="@+id/Local_hospital"
-            android:text="@string/Local_hospital"
-            android:drawableTop="@drawable/hospital2"
-            android:padding="10dp"
             android:layout_width="150dp"
             android:layout_height="125dp"
-            android:background="@drawable/roundedbutton"
             android:layout_toEndOf="@id/Crisis_centers"
-            android:layout_toRightOf="@id/Crisis_centers" />
+            android:layout_toRightOf="@id/Crisis_centers"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/hospital2"
+            android:padding="15dp"
+            android:text="@string/Local_hospital" />
 
         <Button
-            android:background = "@drawable/roundedbutton"
             android:id="@+id/Campus_resources"
-            android:drawableTop="@drawable/campus_resources"
-            android:text="@string/Campus_resources"
-            android:padding="10dp"
             android:layout_width="150dp"
             android:layout_height="125dp"
+            android:layout_below="@id/Local_hospital"
             android:layout_marginTop="16dp"
-            android:layout_below="@id/Local_hospital" />
+            android:background="@drawable/rounded_button"
+            android:drawableTop="@drawable/campus_resources"
+            android:padding="10dp"
+            android:text="@string/Campus_resources" />
 
         <Button
             android:id="@+id/Local_police"
-            android:text="@string/Local_police"
-            android:drawableTop="@drawable/police2"
-            android:padding="10dp"
             android:layout_width="150dp"
             android:layout_height="125dp"
+            android:layout_below="@id/Crisis_centers"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/roundedbutton"
             android:layout_toEndOf="@id/Campus_resources"
-            android:layout_below="@id/Crisis_centers"
-            android:layout_toRightOf="@id/Campus_resources" />
+            android:layout_toRightOf="@id/Campus_resources"
+            android:background="@drawable/rounded_button"
+            android:drawableTop="@drawable/police2"
+            android:padding="25dp"
+            android:text="@string/Local_police" />
 
         <Button
             android:id="@+id/faq"
-            android:text="@string/faq"
-            android:padding="25dp"
             android:layout_width="315dp"
             android:layout_height="70dp"
-            android:background="@drawable/roundedbutton"
             android:layout_below="@+id/Campus_resources"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:padding="25dp"
+            android:text="@string/faq" />
 
     </RelativeLayout>
 
