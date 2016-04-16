@@ -22,11 +22,16 @@ public class QuestionList {
         mQuestions = new ArrayList<>();
 
         mQuestions.add(new Question(R.string.q1, R.string.a1));
-
-        for (int i = 0; i < 20; i++) {
-            Question question = new Question("Is this a question?", "Yes, yes it is.");
-            mQuestions.add(question);
-        }
+        mQuestions.add(new Question(R.string.q2, R.string.a2));
+        mQuestions.add(new Question(R.string.q3, R.string.a3));
+        mQuestions.add(new Question(R.string.q4, R.string.a4));
+        mQuestions.add(new Question(R.string.q5, R.string.a5));
+        mQuestions.add(new Question(R.string.q6, R.string.a6));
+        mQuestions.add(new Question(R.string.q7, R.string.a7));
+        mQuestions.add(new Question(R.string.q8, R.string.a8));
+        mQuestions.add(new Question(R.string.q9, R.string.a9));
+        mQuestions.add(new Question(R.string.q10, R.string.a10));
+        mQuestions.add(new Question(R.string.q11, R.string.a11));
     }
 
     public List<Question> getQuestions() {

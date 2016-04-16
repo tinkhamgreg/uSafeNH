@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">uSafeNH</string>
+    <string name="app_name">uSafe NH</string>
 
     <string name="UNH">University of New Hampshire</string>
     <string name="Saint_Anselm">Saint Anselm College</string>
@@ -20,7 +20,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="usafe">uSafeNH</string>
+    <string name="usafe">uSafe NH</string>
     <string name="usafe_website">http://www.nhcadsv.org/</string>
 
     <string name="Invalid_info">No info found.</string>
@@ -48,6 +48,73 @@
 
     <!--FAQ Question and Answers-->
     <string name="q1">Was I sexually assaulted?</string>
-    <string name="a1">The term sexual assault refers to any sexual contact that occurs without explicit consent. Sexual assault can take many forms, but it is never the victim’s fault. Forms of sexual assault include: penetration of the victim’s body (also known as rape), attempted rape, forcing a victim to perform sexual acts, and fondling or unwanted sexual touching.</string>
-
+    <string name="a1">\n• The term sexual assault refers to any sexual contact that occurs without explicit consent. Sexual assault can take many forms, but it is never the victim’s fault. Forms of sexual assault include: penetration of the victim’s body (also known as rape), attempted rape, forcing a victim to perform sexual acts, and fondling or unwanted sexual touching.</string>
+    <string name="q2">What is Consent?</string>
+    <string name="a2"> \n• Consent is two people (or more) deciding together to do the same thing, at the same time, in the same way, with each other, without coercion, intimidation, manipulation, physical force, power disparity, mental illness, incapacitation, intoxication, and/or threats. \n \n
+        • Consent is active, not passive. There must always be active consent on both sides. A person who consents has the right to change their mind at any point in time. If they do, the sexual activity must stop immediately. \n \n
+        • In New Hampshire, the legal age of consent is 16.</string>
+    <string name="q3">Is it still considered sexual assault if it was my acquaintance, friend, or romantic partner?</string>
+    <string name="a3">\n• Yes. Approximately two thirds of all sexual assaults are perpetrated by someone who the survivor knows. \n \n
+        [SOURCE: U.S. Department of Justice, National Crime Victimization Study: 2009-2013]</string>
+    <string name="q4">I was just sexually assaulted. What do I do?</string>
+    <string name="a4">\n• Go to a safe place. \n \n
+        • If you want to report the crime, notify the police immediately. Reporting the crime can help you regain a sense of personal power and control. \n \n
+        • Call a friend, a family member, or someone else you trust who can be with you and provide support. \n \n
+        • Preserve all physical evidence of the assault. Do not shower, bathe, douche, eat, drink, wash your hands, or brush your teeth until after you have had a medical examination. Save all of the clothing you were wearing at the time of the assault. Do not clean or disturb anything in the area where the assault occurred. \n \n
+        • Seek medical care as soon as possible. Go to a hospital emergency department or doctor\'s office. Even if you think you do not have any physical injuries, it is important to hae a medical examination and discuss with a health care provider the risk of exposure to sexually transmitted infections and the possibility of pregnancy resulting from the sexual assault. Having a medical exam is also a way for you to preserve physical evidence of a sexual assault. \n\n
+        • If you suspect that you may have been given a "rape drug", ask the hospital or clinic where you receive medical care to take a urine sample. Drugs, such as Rophynol and GHB, are more likely to be detected in urine than in the blood. \n\n
+        • After a sexual assault, you have a lot of choices and decisions to make about getting medical care, making a police report, and informing others. You may have concerns about the impact of the assault and the reactions of friends and family members. You can get the information by calling a rape crisis center, a hotline, or other victim assistance agencies. \n\n
+        [SOURCE: Adapted from the Rape, Abus, and Incest National Network[RAINN]Website for N.H. College Students]</string>
+    <string name="q5">How do I file a report? What are my options?</string>
+    <string name="a5">\n <b>Report to Law Enforcement</b> \n\n
+        • An officer will meet with you in a safe place to take a brief, initial report. They will also encourage you to seek medical attention to ensure that you receive proper care and follow up. They will assist you in obtaining medical care at the appropriate facility. The officer will also ensure that a local crisis center advocate is contacted to be with you for as long as you would like. \n\n
+        • Arrangements will be made with you to meet in the near future with the investigating officer or detective assigned to follow up on the initial report. this will involve a more detailed interview about what happened. NH best practice allows for a crisis center advocate to be present with the victim, if the victim desires, during the interview process. \n\n
+        • An investigative follow up will occur with the collection of evidence, contact with potential witnesses and the suspect, as well as a complete and thorough documentation. \n\n
+        • At any point during the investigation, law enforcement may consult with a prosecutor to determine the next steps, make decisions about a possible arrest and/or prosecution of the crime. The victim should be kept informed about the status of their case and can also contact the investigator if they have questions.\n\n\n
+        <b>Have A Forensic Exam Kit Done Anonymously</b> \n\n
+        • A person who is 18 years old or more and has been sexually assaulted in New Hampshire can contact law enforcement to ask questions about the reporting process without identifying themselves in an effort to determine if they want o come forward and make a formal report. They may also provide some information about what happened to them during this conversation. However, law enforcement cannot proceed with an investigation without an identified victim. \n\n
+        • Not Report to law enforcement.</string>
+    <string name="q6">How long do I have to report?</string>
+    <string name="a6">\n• In New Hampshire, the statute of limitations for Aggravated Felonious Sexual Assault and Felonious Sexual Assault is 6 years. \n\n
+        • The statute of limitations for Sexual Assault is 1 year.
+        • If the victim is under the age of 18 at the time of their assault, the statute of limitations is 22 years after their 18th birthday (until age 40).</string>
+    <string name="q7">What will happen if I go to the hospital?</string>
+    <string name="a7">\n <b>Before Going to The Hospital </b>\n\n
+        • If possible, avoid showering, bathing, using feminine hygiene products, washing your hands, or brushing your teeth before arrival in order to preserve evidence.
+        • DNA evidence is most reliably collected within 72 hours. However, forensic exams can be performed up to five days after an assault. \n \n
+        • Bring a change of clothing with you if you are able to. Any clothing worn at the time of the attack may be collected as evidence. \n\n
+        • You may wish to bring a trusted friend or family member with you for support. \n\n
+        • A local crisis center advocate will be available to provide free, confidential emotional support, information, and resources throughout the process. \n\n\n
+        <b>The Forensic Examination</b> \n \n
+        • The forensic exam will only be conducted with your informed consent. \n\n
+        • An advocate or someone you trust can be present with you for support during the exam if you wish. \n\n
+        • Your medical-forensic history will be collected for the purpose of diagnosis and treatment. \n\n
+        • There will be a full body physical examination, including a detailed genital exam looking for trauma. \n\n
+        • You may choose not to proceed with any part of the examination that you are uncomfortable with, as this should not be a retraumatizing experience. \n\n
+        [SOURCE: http://nhcadsv.org/hospital_exam.cfm</string>
+    <string name="q8">If I go through the forensic exam do I have to report to the police? Will the hospital call the police?</string>
+    <string name="a8">\n• No. If you go to the hospital, you will receive medical care and still be able to decide whether or not you wish to report to law enforcement if you are over the age of 18. \n\n
+        • You also have the option to have forensic evidence collected anonymously. You will be given an anonymous serial number for the exam kit, which will be stored at the state lab, and have 60 days to file a report with law enforcement. \n\n
+        • After 60 days, you may still file a report with law enforcement, but there is no guarantee that evidence from the kit will be preserved.\n\n
+    [SOURCE: http://doj.nh.gov/criminal/victim-assistance/documents/acute-care-protocol.pdf]</string>
+    <string name="q9">How much will it cost?</string>
+    <string name="a9">\n• You will not be charged for the sexual assault examination. If you do not have insurance or decide not to report to law enforcment, all costs will be covered by the NH Attorney General\'s Office. \n\n
+        • You will receive a voucher for a follow-up exam. \n\n
+        • If you decide to report to law enforcement, you may also be reimbursed for follow-up care and ongoing crime-related expenses (e.g., mental health treatment) after you leave the hospital. \n\n
+        For More Information, Contact \n\n
+        New Hampshire Victims Compensation Program \n
+        Office of the Attorney General\n
+        33 Capitol Street\n
+        Concord, NH 03301-6397\n
+        Phone:(603) 271-1284\n
+        Toll Free: 1-800-300-4500 (in NH only)\n
+        TDD Access Relay NH: 1-800-735-2964 \n
+        Email: victimcomp@doj.nh.gov</string>
+    <string name="q10">Where can I find my college\'s policies on sexual assault?</string>
+    <string name="a10">\n• You can find your college\'s campus specific information in the student handbook.</string>
+    <string name="q11">I am a survivor of sexual assault and need someone to talk to. What supports are available to me, and will what I say remain confidential?</string>
+    <string name="a11">\n <b>Support is Campus Specific</b>\n\n
+        • Counseling centers(if applicable) and Support groups(if applicable) are available.\n\n
+        • You may with to speak with the Title IX Coordinator at your college. the Title IX Coordinator can be a very helpful resource. However, they will be required to file a report by law if you disclose that you have been sexually assaulted. \n\n
+        • Confidential advocates from your local crisis center can be reached anytime of the day or night.</string>
 </resources>

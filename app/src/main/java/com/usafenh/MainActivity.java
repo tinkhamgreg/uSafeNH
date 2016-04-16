@@ -146,9 +146,8 @@ public class MainActivity extends FragmentActivity
                 setFragment(getHelpFragment());
             }
         } else if (id == R.id.nav_faq) {
-            if (userData.getSchoolID() > 0) {
                 setFragment(getFAQFragment());
-            }
+
         }  else if (id == R.id.nav_help_now) {
 
         } else if (id == R.id.nav_exit) {

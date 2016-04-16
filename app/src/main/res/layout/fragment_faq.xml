@@ -8,18 +8,20 @@
     android:paddingTop="@dimen/fab_margin"
     android:paddingLeft="@dimen/fab_margin"
     android:paddingRight="@dimen/fab_margin"
-    android:background="#E0E0E0">
+    android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/faq_self"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textAlignment="center" />
 
     <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/question_recycler_view"
         android:layout_height="match_parent"
-        android:layout_width="match_parent" />
+        android:layout_width="match_parent"
+        android:background="@color/white" />
 
 </LinearLayout>

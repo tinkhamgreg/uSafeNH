@@ -4,20 +4,26 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_school_selection"
-            android:title="School Selection" />
+            android:title="School Selection"
+            android:icon="@drawable/school"
+            />
         <item
             android:id="@+id/nav_school_resources"
-            android:title="School Resources" />
+            android:title="School Resources"
+            android:icon="@drawable/campus_resources_small"/>
         <item
             android:id="@+id/nav_faq"
-            android:title="FAQ" />
+            android:title="FAQ"
+            android:icon="@drawable/faq"/>
 
         <item
                 android:id="@+id/nav_help_now"
-                android:title="Get Help Now" />
+                android:title="Get Help Now"
+                android:icon="@drawable/help"/>
         <item
                 android:id="@+id/nav_exit"
-                android:title="Exit App" />
+                android:title="Exit App"
+                android:icon="@drawable/exit"/>
 
     </group>
 
