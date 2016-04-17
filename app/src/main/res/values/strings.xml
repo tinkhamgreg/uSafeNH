@@ -47,9 +47,15 @@
 
 
     <!--FAQ Question and Answers-->
+    <!-- List for Myself FAQ: 1-11-->
+    <!-- List for Friend of Survivor: 12,2,13,14,15,10-->
+    <!-- List for Family of Survivor:12,2,16,17,18,19,10,20,21-->
+    <!-- List for Faculty and Staff:12,2,22,23,24,25,26,27-->
+    <!-- List for Prospective Students:12,2,28,29,30,31-->
+    <!-- List for Off Campus Community members:12,2,32,33,34-->
     <string name="q1">Was I sexually assaulted?</string>
     <string name="a1">\n• The term sexual assault refers to any sexual contact that occurs without explicit consent. Sexual assault can take many forms, but it is never the victim’s fault. Forms of sexual assault include: penetration of the victim’s body (also known as rape), attempted rape, forcing a victim to perform sexual acts, and fondling or unwanted sexual touching.</string>
-    <string name="q2">What is Consent?</string>
+    <string name="q2">What is consent?</string>
     <string name="a2"> \n• Consent is two people (or more) deciding together to do the same thing, at the same time, in the same way, with each other, without coercion, intimidation, manipulation, physical force, power disparity, mental illness, incapacitation, intoxication, and/or threats. \n \n
         • Consent is active, not passive. There must always be active consent on both sides. A person who consents has the right to change their mind at any point in time. If they do, the sexual activity must stop immediately. \n \n
         • In New Hampshire, the legal age of consent is 16.</string>
@@ -117,4 +123,118 @@
         • Counseling centers(if applicable) and Support groups(if applicable) are available.\n\n
         • You may with to speak with the Title IX Coordinator at your college. the Title IX Coordinator can be a very helpful resource. However, they will be required to file a report by law if you disclose that you have been sexually assaulted. \n\n
         • Confidential advocates from your local crisis center can be reached anytime of the day or night.</string>
+    <string name ="q12">What is sexual assault?</string>
+    <string name ="a12">• The term sexual assault refers to any sexual contact that occurs without explicit consent. Sexual assault can take many forms, but it is never the victim\'s fault. Some forms of sexual assault include penetration of the victim\'s body (also known as rape), attempted rape, forcing a victim to perform sexual acts, and fondling or unwanted sexual touching.</string>
+    <string name ="q13">My friend was just sexually assaulted. What do I do?</string>
+    <string name ="a13">• Ask your friend if they are safe now, especially if they told you by phone or text.\n\n
+        • Listen to and support your friend. \n\n
+        • Believe your friend. \n\n
+        • Reassure your friend that they are not to blame in any way. \n\n
+        • Encourage your friend to seek medical attention, but ultimately respect their decision if they are not ready. Offer information and support but do not force your friend to do anything they do not want to do. \n\n
+        • If your friend plans to seek medical care or file a report, offer to go with them.</string>
+    <string name ="q14">How can I support a friend who has been sexually assaulted?</string>
+    <string name ="a14">• Listen without interrupting.\n\n
+        • Believe your friend.\n\n
+        • Remain calm and non-judgemental.\n\n
+        • Do not interrogate. Allow your friend to open up to you on their own terms.\n\n
+        • Reassure your friend that this was not their fault and they are not to blame in any way.\n\n
+        • Ask how you can help support them.\n\n
+        • If your friend plans to seek medical care or file a report, offer to go with them.\n\n
+        • Encourage your friend to seek support, but ultimately respect your friend\'s decision if they are not ready.\n\n
+        • Respect your friend\'s privacy.\n\n
+        • Encourage your friend to practice good self-care, and remember that it is important to take care of yourself as well.</string>
+    <string name ="q15">Is there anyone on campus that I can talk to for support?</string>
+    <string name ="a15">• It can be hard to know what to do to help a friend who has been sexually assaulted. You may feel angry, confused and helpless. There are people you can talk to. The counseling center on your campus (if applicable) can provide confidential support.</string>
+    <string name ="q16">How can I talk about sexual assault prevention with my child or family member?</string>
+    <string name ="a16">• It can be difficult to talk about sexual assault with your child or family member.\n\n
+        <b>Some Talking Points Include:</b>\n\n
+        • Educate yourself about sexual assault in the college setting.\n\n
+        • Discuss the importance of consent. Explain that it is more than no means no.\n\n
+        • Plan for safety in advance with them. Strategize about what to do in a potentially dangerous situation.\n\n
+        • Emphasize that there is never an excuse for sexual assault and that survivors are never to blame.\n\n
+        • Encourage your student to get involved with sexual assault prevention on campus.\n\n
+        • Let them know that you will always be there for them and that they can come to you no matter what.</string>
+    <string name ="q17">My child or family member was sexually assaulted, how am I supposed to react?</string>
+    <string name ="a17">• It can be very difficult and overwhelming to hear that your child or family member has been sexually assaulted. The  most important thing you can do is to help your college student feel safe and supported. Anger confusion, sadness, and helplessness are all normal emotions to be experiencing right  now. Remember that it is important to take care of yourself and resources are available for you as well.</string>
+    <string name ="q18">My child or family member was sexually assaulted, what can I do to be supportive?</string>
+    <string name ="a18">• Listen without interrupting.\n\n
+        • Believe them.\n\n
+        • Remain calm and non-judgemental.\n\n
+        • Do not interrogate. Allow them to open up to you on their own terms.\n\n
+        • Reassure them that this was not their fault and they are not to blame in any way.\n\n
+        • Ask how you can help support them.\n\n
+        • If they plan to seek medical care or file a report, offer to go with them.\n\n
+        • Encourage them to seek support, but ultimately respect their decision if they are not ready.\n\n
+        • Respect their privacy.\n\n
+        • Encourage them to practice good self-care, and remember that it is important to take care of yourself as well.</string>
+    <string name ="q19">My child or family member was sexually assaulted, where can I receive support?</string>
+    <string name ="a19">• Reach out to your local crisis center. 24 hour hotlines are available throughout the state. Advocates can provide you with free, confidential support and information about resources.</string>
+    <string name ="q20">What is being done to address sexual assault on college campuses?</string>
+    <string name ="a20">• Overview of statewide and national efforts\n\n
+        • Campus specific efforts\n\n
+        • Title IX Coordinator and other resources.</string>
+    <string name ="q21">My family member/child is looking to or plans to attend this college. Where can I find information about sexual assault on this campus?</string>
+    <string name ="a21">• Campus specific links.</string>
+    <string name ="q22">A student disclosed to me that she/he was assaulted. What do I do?</string>
+    <string name ="a22">• Listen without interrupting.\n\n
+        • Believe them.\n\n
+        • Remain calm and non-judgemental.\n\n
+        • Do not interrogate. Allow them to open up to you on their own terms.\n\n
+        • Reassure them that this was not their fault and they are not to blame in any way.\n\n
+        • Ask how you can help support them.\n\n
+        • If they plan to seek medical care or file a report, offer to go with them.\n\n
+        • Encourage them to seek support, but ultimately respect their decision if they are not ready.\n\n
+        • Respect their privacy. However, if you are a mandated reporter, follow protocol. </string>
+    <string name ="q23">Who is a mandated reporter?</string>
+    <string name ="a23">• Campus-specific mandated reporting protocols.</string>
+    <string name ="q24">As a mandated reporter, what am I required to report?</string>
+    <string name ="a24">• Campus specific mandated reporting protocols.</string>
+    <string name ="q25">I overheard someone say that a student was sexually assaulted. What should I do?</string>
+    <string name ="a25">• Campus-specific mandated reporting protocols.</string>
+    <string name ="q26">How can I support a student who has been sexually assaulted?</string>
+    <string name ="a26">• Listen without interrupting.\n\n
+        • Believe them.\n\n
+        • Remain calm and non-judgemental.\n\n
+        • Do not interrogate. Allow them to open up to you on their own terms.\n\n
+        • Reassure them that this was not their fault and they are not to blame in any way.\n\n
+        • Ask how you can help support them.\n\n
+        • If they plan to seek medical care or file a report, offer to go with them.\n\n
+        • Encourage them to seek support, but ultimately respect their decision if they are not ready.\n\n
+        • Respect your friend\'s privacy.\n\n
+        • Encourage them to practice good self-care.</string>
+    <string name ="q27">I am a faculty or staff member and I am experiencing or have experienced sexual assault, sexual harassment, intimate partner violence, and/or stalking. What resources are available for me?</string>
+    <string name ="a27">• Campus-specific resources.</string>
+    <string name ="q28">Are there ways to reduce my risk of sexual assault?</string>
+    <string name ="a28"> <b>It is important to remember that sexual assault survivors are never to blame, but there are steps that you can take to increase your safety on campus.</b>\n\n
+        • Be aware of your surroundings.\n\n
+        • Try to avoid isolated areas where it may be difficult to get help.\n\n
+        • Make sure your cell phone is with you and charged.\n\n
+        • Bring a friend with you to parties and social gatherings. Agree to stick together and watch out for each other.\n\n
+        • Keep an eye on your drink at parties and social gatherings. Do not accept drinks from people you do not know.\n\n
+        • Trust your gut.</string>
+    <string name ="q29">Where can I find information and statistics about sexual assault on campus?</string>
+    <string name ="a29">• Campus specific links.\n\n
+        •Clery Reports: Also provide information on the reporting process and the meaning of statistics.</string>
+    <string name ="q30">I was sexually assaulted in the past. Are there resources available for me on campus?</string>
+    <string name ="a30"><b>Campus-specific:</b>\n\n
+        • Campus counseling center(if applicable).\n\n
+        • Local crisis center.</string>
+    <string name ="q31">How can I help with preventing and raising awareness about sexual assault on campus?</string>
+    <string name ="a31"><b>Campus specific:</b>\n\n
+        • Info about sexual assault awareness groups/events, etc.\n\n
+        • You\'re Not Alone\n\n
+        • Know your Title IX.
+         </string>
+    <string name ="q32">What should I do if a student discloses to me that they have been sexually assaulted?</string>
+    <string name ="a32">• Listen and offer support.\n\n
+        • Believe them.\n\n
+        • Avoid judgement.\n\n
+        • Will depend on role and relationship.</string>
+    <string name ="q33">How can I support a sexual assault survivor?</string>
+    <string name ="a33">• Listen and offer support.\n\n
+        • Will depend on role and relationship.</string>
+    <string name ="q34">What is the college doing about sexual assault?</string>
+    <string name ="a34"><b>Campus Specific</b></string>
+
+
 </resources>
