@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp1">
         <item
             android:id="@+id/nav_school_selection"
-            android:title="School Selection" />
+            android:title="School Selection"
+            android:icon="@drawable/school" />
+        </group>
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/grp2">
         <item
             android:id="@+id/nav_school_resources"
-            android:title="School Resources" />
+            android:title="@string/Campus_resources"
+            android:icon="@drawable/campus_resources_small"/>
+        </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp3">
         <item
             android:id="@+id/nav_faq"
-            android:title="FAQ" />
+            android:title="FAQ"
+            android:icon="@drawable/faq"/>
+        </group>
 
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp4">
         <item
                 android:id="@+id/nav_help_now"
-                android:title="Get Help Now" />
+                android:title="Get Help Now"
+                android:icon="@drawable/help"/>
+        </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp5">
         <item
                 android:id="@+id/nav_exit"
-                android:title="Exit App" />
+                android:title="Exit App"
+                android:icon="@drawable/exit"/>
+        </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp6">
 
     </group>
 

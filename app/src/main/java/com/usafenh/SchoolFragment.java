@@ -72,7 +72,7 @@ public class SchoolFragment extends Fragment {
 
         mainActivity.getUserData().setSchoolID(buttonResourceID);
 
-        mainActivity.setFragment(mainActivity.getHelpFragment());
+        mainActivity.goToHelpFragment();
     }
 
 }

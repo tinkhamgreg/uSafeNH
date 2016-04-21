@@ -25,7 +25,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="10dp"
-        />
+        android:elevation="2dp"
+        android:shadowColor="@color/design_fab_shadow_mid_color" />
 
     <Button
         android:id="@+id/Local_hospital"
@@ -38,7 +39,9 @@
         android:text="@string/Local_hospital"
         android:layout_below="@+id/Crisis_centers"
         android:layout_margin="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp"
+        android:shadowColor="@color/design_fab_shadow_mid_color" />
 
     <Button
         android:id="@+id/Campus_resources"
@@ -51,7 +54,9 @@
         android:text="@string/Campus_resources"
         android:layout_below="@+id/Local_hospital"
         android:layout_margin="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp"
+        android:shadowColor="@color/design_fab_shadow_mid_color" />
 
 
     <Button
@@ -66,7 +71,8 @@
         android:layout_below="@id/Campus_resources"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-         />
+        android:elevation="2dp"
+        android:shadowColor="@color/design_fab_shadow_mid_color" />
 
     <Button
         android:id="@+id/faq"
@@ -79,7 +85,8 @@
         android:layout_below="@id/Local_police"
         android:layout_margin="10dp"
 
-         />
+        android:elevation="2dp"
+        android:shadowColor="@color/design_fab_shadow_mid_color" />
 
 
 </RelativeLayout>

@@ -33,7 +33,9 @@
                 android:background="@drawable/rounded_button"
                 android:drawableTop="@drawable/crisis_center"
                 android:padding="15dp"
-                android:text="@string/Crisis_centers" />
+                android:text="@string/Crisis_centers"
+                android:shadowColor="@color/design_fab_shadow_mid_color"
+                android:elevation="2dp" />
 
             <Button
                 android:id="@+id/Local_hospital"
@@ -46,7 +48,8 @@
                 android:padding="15dp"
                 android:text="@string/Local_hospital"
 
-                />
+                android:shadowColor="@color/design_fab_shadow_mid_color"
+                android:elevation="2dp" />
 
             <Button
                 android:id="@+id/Campus_resources"
@@ -59,7 +62,8 @@
                 android:padding="10dp"
                 android:text="@string/Campus_resources"
 
-                />
+                android:shadowColor="@color/design_fab_shadow_mid_color"
+                android:elevation="2dp" />
 
             <Button
                 android:id="@+id/Local_police"
@@ -73,7 +77,9 @@
                 android:background="@drawable/rounded_button"
                 android:drawableTop="@drawable/police2"
                 android:padding="25dp"
-                android:text="@string/Local_police" />
+                android:text="@string/Local_police"
+                android:shadowColor="@color/design_fab_shadow_mid_color"
+                android:elevation="2dp" />
 
             <Button
                 android:id="@+id/faq"
@@ -84,7 +90,9 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_button"
                 android:padding="25dp"
-                android:text="@string/faq" />
+                android:text="@string/faq"
+                android:shadowColor="@color/design_fab_shadow_mid_color"
+                android:elevation="2dp" />
 
 
         </RelativeLayout>

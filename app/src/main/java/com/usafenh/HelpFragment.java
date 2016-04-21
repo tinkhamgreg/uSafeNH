@@ -77,7 +77,7 @@ public class HelpFragment extends Fragment {
         (view.findViewById(R.id.faq)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mainActivity.setFragment(mainActivity.getFAQFragment());
+                mainActivity.goToFAQFragment();
             }
         });
     }
