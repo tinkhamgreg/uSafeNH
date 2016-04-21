@@ -143,8 +143,6 @@ public class MainActivity extends FragmentActivity
         } else if (id == R.id.nav_faq) {
             goToFAQFragment();
 
-        }  else if (id == R.id.nav_help_now) {
-
         } else if (id == R.id.nav_exit) {
             AppExit();
         }

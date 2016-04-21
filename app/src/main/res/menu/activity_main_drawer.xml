@@ -26,14 +26,6 @@
         </group>
 
     <group android:checkableBehavior="single"
-        android:id="@+id/grp4">
-        <item
-                android:id="@+id/nav_help_now"
-                android:title="Get Help Now"
-                android:icon="@drawable/help"/>
-        </group>
-
-    <group android:checkableBehavior="single"
         android:id="@+id/grp5">
         <item
                 android:id="@+id/nav_exit"
