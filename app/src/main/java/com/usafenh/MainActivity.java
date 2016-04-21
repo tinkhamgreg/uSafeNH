@@ -1,5 +1,6 @@
 package com.usafenh;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -115,15 +116,7 @@ public class MainActivity extends FragmentActivity
 
         return super.onOptionsItemSelected(item);
     }
-    public void AppExit()
-    {
 
-        this.finish();
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -144,7 +137,15 @@ public class MainActivity extends FragmentActivity
             goToFAQFragment();
 
         } else if (id == R.id.nav_exit) {
-            AppExit();
+            if(android.os.Build.VERSION.SDK_INT >= 21)
+            {
+                finishAndRemoveTask();
+            }
+            else
+            {
+                finish();
+            }
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
