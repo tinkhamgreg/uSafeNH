@@ -1,63 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#E0E0E0">
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#E0E0E0">
+
 <RelativeLayout
+    android:id="@+id/relativeLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true">
 
-
     <Button
-        android:layout_width="175dp"
-        android:layout_height="190dp"
-        android:clickable="false"
         android:id="@+id/UNH_button"
+        android:layout_width="150dp"
+        android:layout_height="190dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_button"
         android:drawableTop="@drawable/unh_icon"
-        android:background="@drawable/rounded_button"
-        android:text="@string/UNH"
-        android:layout_marginRight="10dp"
-
-/>
+        android:padding="15dp"
+        android:text="@string/UNH" />
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="190dp"
         android:id="@+id/Saint_Anselm"
-        android:paddingBottom="10dp"
+        android:layout_width="150dp"
+        android:layout_height="190dp"
+        android:layout_toEndOf="@id/UNH_button"
+        android:layout_toRightOf="@id/UNH_button"
+        android:background="@drawable/rounded_button"
         android:drawableTop="@drawable/sac"
-        android:background="@drawable/rounded_button"
-        android:text="@string/Saint_Anselm"
-        android:layout_toRightOf="@+id/UNH_button"
-        android:layout_toTheEndof="UNH_button"
-        />
+        android:padding="15dp"
+        android:text="@string/Saint_Anselm" />
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="190dp"
         android:id="@+id/White_Mountain"
-        android:drawableTop="@drawable/wmcc"
-        android:background="@drawable/rounded_button"
+        android:layout_width="150dp"
+        android:layout_height="190dp"
         android:layout_below="@id/Saint_Anselm"
-        android:text="@string/White_Mountain"
- />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:drawableTop="@drawable/wmcc"
+        android:padding="10dp"
+        android:text="@string/White_Mountain" />
 
     <Button
-        android:layout_width="175dp"
-        android:layout_height="190dp"
         android:id="@+id/Keene_State"
-        android:drawableTop="@drawable/keene"
-        android:background="@drawable/rounded_button"
-        android:layout_marginLeft="10dp"
-        android:text="@string/Keene_State"
+        android:layout_width="150dp"
+        android:layout_height="190dp"
+        android:layout_below="@id/UNH_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_toEndOf="@id/White_Mountain"
         android:layout_toRightOf="@id/White_Mountain"
-        android:layout_below="@id/Saint_Anselm"
-        />
+        android:background="@drawable/rounded_button"
+        android:drawableTop="@drawable/keene"
+        android:padding="25dp"
+        android:text="@string/Keene_State" />
 
 </RelativeLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignBottom="@+id/relativeLayout"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="472dp"
+    android:layout_marginStart="472dp" />
+
 </RelativeLayout>
-
-

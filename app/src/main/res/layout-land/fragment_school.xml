@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/UNH_button"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/unh_icon"
+            android:drawableStart="@drawable/unh_icon"
+            android:padding="5dp"
+            android:text="@string/UNH"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/Saint_Anselm"
+            android:layout_alignStart="@+id/Saint_Anselm"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/Saint_Anselm"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/sac"
+            android:drawableStart="@drawable/sac"
+            android:padding="10dp"
+            android:text="@string/Saint_Anselm"
+            android:layout_below="@+id/UNH_button"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/White_Mountain"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/wmcc"
+            android:drawableStart="@drawable/wmcc"
+            android:padding="10dp"
+            android:text="@string/White_Mountain"
+            android:layout_below="@+id/Saint_Anselm"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/Keene_State"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/keene"
+            android:drawableStart="@drawable/keene"
+            android:padding="10dp"
+            android:text="@string/Local_police"
+            android:layout_below="@id/White_Mountain"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp" />
+
+    </RelativeLayout>
+</ScrollView>
