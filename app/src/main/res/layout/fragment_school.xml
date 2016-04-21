@@ -31,7 +31,7 @@
         android:background="@drawable/rounded_button"
         android:text="@string/Saint_Anselm"
         android:layout_toRightOf="@+id/UNH_button"
-        android:layout_toTheEndof="UNH_button"
+        android:layout_toEndOf="@+id/UNH_button"
         />
 
     <Button
