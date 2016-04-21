@@ -42,7 +42,7 @@
                 android:layout_toEndOf="@id/Crisis_centers"
                 android:layout_toRightOf="@id/Crisis_centers"
                 android:background="@drawable/rounded_button"
-                android:drawableLeft="@drawable/hospital2"
+                android:drawableTop="@drawable/hospital2"
                 android:padding="15dp"
                 android:text="@string/Local_hospital"
 
