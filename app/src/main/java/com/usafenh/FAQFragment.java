@@ -16,6 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.util.Log;
 
@@ -81,16 +84,18 @@ public class FAQFragment extends Fragment{
     private class QuestionHolder extends RecyclerView.ViewHolder {
         private Question mQuestion;
 
+        private RelativeLayout mQuestionLayout;
         private TextView mQuestionTextView;
-        private CheckBox mShowAnswerCheckBox;
+        private ImageView mArrowImage;
         private TextView mAnswerTextView;
 
         public QuestionHolder(View itemView) {
             super(itemView);
             Log.d(TAG, "questionHolder");
 
+            mQuestionLayout = (RelativeLayout)itemView.findViewById(R.id.list_item_question_layout);
             mQuestionTextView = (TextView)itemView.findViewById(R.id.list_item_question_text_view);
-            mShowAnswerCheckBox = (CheckBox)itemView.findViewById(R.id.list_item_show_answer_check_box);
+            mArrowImage = (ImageView)itemView.findViewById(R.id.list_item_arrow_image);
             mAnswerTextView = (TextView)itemView.findViewById(R.id.list_item_answer_text_view);
         }
 
@@ -109,12 +114,11 @@ public class FAQFragment extends Fragment{
                 mAnswerTextView.setText(mQuestion.getAnswer());
             }
 
-            mShowAnswerCheckBox.setChecked(mQuestion.getShowAnswer());
             updateAnswerVisibility();
 
-            mShowAnswerCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            mQuestionLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                public void onClick(View v) {
                     // Set the question's show answer property
                     question.togglShowAnswer();
                     updateAnswerVisibility();
@@ -125,7 +129,9 @@ public class FAQFragment extends Fragment{
         private void updateAnswerVisibility() {
             if(mQuestion.getShowAnswer()) {
                 mAnswerTextView.setVisibility(View.VISIBLE);
+                mArrowImage.setImageResource(R.mipmap.up_arrow);
             } else {
+                mArrowImage.setImageResource(R.mipmap.down_arrow);
                 mAnswerTextView.setVisibility(View.GONE);
             }
         }
