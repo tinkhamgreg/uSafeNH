@@ -30,10 +30,34 @@
     <string name="UNH_Local_hospital">Local Hospitals</string>
     <string name="UNH_Crisis_centers">Crisis Centers</string>
 
-    <string name="Keene_State_Local_police">Local Police</string>
-    <string name="Keene_State_Campus_resources">Campus Resources</string>
-    <string name="Keene_State_Local_hospital">Cheshire Medical Center\nAddress:\n\t\t580 Court St., Keene, NH 03431\nContact:\n\t\t603-354-6600</string>
-    <string name="Keene_State_Crisis_centers">Crisis Centers</string>
+    <string name="Keene_State_Local_police">
+        Keene Police Department\n
+        Address:\n
+        \t\t400 Marlboro St., Keene, NH 03431\n
+        Contact:\n
+        \t\t603-357-9815
+    </string>
+    <string name="Keene_State_Campus_resources">
+        Counseling Center\n
+        Address:\n
+        \t\tElliot Center (3rd Floor) / 229 Main St., Keene, NH 03435\n
+        Contact:\n
+        \t\t603-358-2437 / Crisis Line: 603-358-2436
+    </string>
+    <string name="Keene_State_Local_hospital">
+        Cheshire Medical Center\n
+        Address:\n
+        \t\t580 Court St., Keene, NH 03431\n
+        Contact:\n
+        \t\t603-354-6600
+    </string>
+    <string name="Keene_State_Crisis_centers">
+        Monadnock Center for Violence Prevention (MCVP):\n
+        Address:\n
+        \t\t12 Court St., Keene, NH 03431\n
+        Contact:\n
+        \t\t603-352-3782
+    </string>
 
     <string name="Saint_Anselm_Local_police">Local Police</string>
     <string name="Saint_Anselm_Campus_resources">Campus Resources</string>
