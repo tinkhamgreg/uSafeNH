@@ -1,45 +1,19 @@
 package com.usafenh;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-
-import java.util.UUID;
 
 public class MainActivity extends FragmentActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,7 +38,7 @@ public class MainActivity extends FragmentActivity
         Fragment fragment = fragmentMgr.findFragmentById(R.id.fragment_container);
 
         if (fragment == null) {
-            setFragment(getSchoolFragment());
+            goToSchoolFragment();
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -79,28 +53,31 @@ public class MainActivity extends FragmentActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public Fragment getSchoolFragment() {
+    public void goToSchoolFragment() {
         schoolFragment = SchoolFragment.newInstance().newInstance();
-        return schoolFragment;
+        setFragment(schoolFragment, false);
     }
 
-    public Fragment getHelpFragment() {
+    public void goToHelpFragment() {
         helpFragment = HelpFragment.newInstance().newInstance();
-        return helpFragment;
+        setFragment(helpFragment, true);
     }
 
-    public Fragment getFAQFragment() {
+    public void goToFAQFragment() {
         faqFragment = FAQFragment.newInstance().newInstance();
-        return faqFragment;
+        setFragment(faqFragment, true);
     }
 
-    public void setFragment(Fragment newFragment) {
+    public void setFragment(Fragment newFragment, boolean addToBackStack) {
         Log.d(TAG, "setFragment() called");
 
-        fragmentMgr.beginTransaction()
-                .add(R.id.fragment_container, newFragment)
-                .addToBackStack(null)
-                .commit();
+        FragmentTransaction transaction = fragmentMgr.beginTransaction();
+        transaction.replace(R.id.fragment_container, newFragment);
+        if (addToBackStack) {
+            transaction.addToBackStack(newFragment.getTag());
+        }
+
+        transaction.commit();
     }
 
     public UserData getUserData() {
@@ -150,17 +127,21 @@ public class MainActivity extends FragmentActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        Log.d(TAG, "onNavigationItemSelected() called");
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_school_selection) {
-            setFragment(getSchoolFragment());
+            goToSchoolFragment();
         } else if (id == R.id.nav_school_resources) {
             if (userData.getSchoolID() > 0) {
-                setFragment(getHelpFragment());
+                goToHelpFragment();
+            } else {
+                goToSchoolFragment();
+                ((NavigationView) findViewById(R.id.nav_view)).getMenu().getItem(0).setChecked(true);
             }
         } else if (id == R.id.nav_faq) {
-                setFragment(getFAQFragment());
+            goToFAQFragment();
 
         }  else if (id == R.id.nav_help_now) {
 
@@ -171,5 +152,25 @@ public class MainActivity extends FragmentActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(ConstantValues.SCHOOL_TOKEN, userData.getSchoolID());
+        savedInstanceState.putInt(ConstantValues.HELP_TYPE_TOKEN, userData.getHelpType());
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore state members from saved instance
+        userData.setSchoolID(savedInstanceState.getInt(ConstantValues.SCHOOL_TOKEN));
+        userData.setHelpType(savedInstanceState.getInt(ConstantValues.HELP_TYPE_TOKEN));
     }
 }

@@ -4,10 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="75dp"
+    android:layout_marginTop="50dp"
     android:paddingTop="@dimen/fab_margin"
-    android:paddingLeft="@dimen/fab_margin"
-    android:paddingRight="@dimen/fab_margin"
     android:background="@color/white">
 
     <TextView
