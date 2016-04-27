@@ -22,8 +22,8 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 />
             <ImageView
-                android:layout_width="43dp"
-                android:layout_height="43dp"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
                 android:background="@mipmap/ic_launcher"
                 android:id="@+id/toolbar_image"
                 android:layout_centerVertical="true"
