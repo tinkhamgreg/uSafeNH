@@ -50,7 +50,7 @@ public class Question {
         return showAnswer;
     }
 
-    public void togglShowAnswer() {
+    public void toggleShowAnswer() {
         showAnswer = !showAnswer;
     }
 }

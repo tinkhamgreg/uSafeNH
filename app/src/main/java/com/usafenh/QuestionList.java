@@ -1,7 +1,5 @@
 package com.usafenh;
 
-import android.content.Context;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -9,29 +7,25 @@ import java.util.UUID;
 public class QuestionList {
     private static QuestionList sQuestionList;
 
+    protected int categoryTitleResource;
+
     private List<Question> mQuestions;
 
-    public static QuestionList get(Context context) {
+    private Boolean showQuestions = false;
+
+    public static QuestionList get() {
         if (sQuestionList == null) {
-            sQuestionList = new QuestionList(context);
+            sQuestionList = new QuestionList();
         }
         return sQuestionList;
     }
 
-    private QuestionList(Context context) {
+    protected QuestionList() {
         mQuestions = new ArrayList<>();
+    }
 
-        mQuestions.add(new Question(R.string.q1, R.string.a1));
-        mQuestions.add(new Question(R.string.q2, R.string.a2));
-        mQuestions.add(new Question(R.string.q3, R.string.a3));
-        mQuestions.add(new Question(R.string.q4, R.string.a4));
-        mQuestions.add(new Question(R.string.q5, R.string.a5));
-        mQuestions.add(new Question(R.string.q6, R.string.a6));
-        mQuestions.add(new Question(R.string.q7, R.string.a7));
-        mQuestions.add(new Question(R.string.q8, R.string.a8));
-        mQuestions.add(new Question(R.string.q9, R.string.a9));
-        mQuestions.add(new Question(R.string.q10, R.string.a10));
-        mQuestions.add(new Question(R.string.q11, R.string.a11));
+    protected void addQuestion(Question newQuestion) {
+        mQuestions.add(newQuestion);
     }
 
     public List<Question> getQuestions() {
@@ -56,5 +50,17 @@ public class QuestionList {
         }
 
         return -1;
+    }
+
+    public int getCategoryTitleResource() {
+        return categoryTitleResource;
+    }
+
+    public Boolean getShowQuestions() {
+        return showQuestions;
+    }
+
+    public void toggleShowQuestions() {
+        showQuestions = !showQuestions;
     }
 }

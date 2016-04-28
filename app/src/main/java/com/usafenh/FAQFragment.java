@@ -1,11 +1,9 @@
 package com.usafenh;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,13 +12,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.util.Log;
 
 import java.util.List;
 
@@ -30,8 +24,8 @@ public class FAQFragment extends Fragment{
     private static final String TAG = "FAQFragment";
     private MainActivity mainActivity;
 
-    private QuestionAdapter mAdapter;
-    private RecyclerView mQuestionRecyclerView;
+    private CategoryAdapter mCategoryAdapter;
+    private RecyclerView mCategoryRecyclerView;
 
     private UserData userData;
 
@@ -52,8 +46,8 @@ public class FAQFragment extends Fragment{
         Log.d(TAG, "onCreateView()");
         View v = inflater.inflate(R.layout.fragment_faq, container, false);
 
-        mQuestionRecyclerView = (RecyclerView) v.findViewById(R.id.question_recycler_view);
-        mQuestionRecyclerView.setLayoutManager(new LinearLayoutManager(mainActivity));
+        mCategoryRecyclerView = (RecyclerView) v.findViewById(R.id.category_recycler_view);
+        mCategoryRecyclerView.setLayoutManager(new LinearLayoutManager(mainActivity));
 
         updateUI();
 
@@ -69,16 +63,105 @@ public class FAQFragment extends Fragment{
 
     private void updateUI() {
         Log.d(TAG, "updateUI() called");
-        QuestionList questionList = QuestionList.get(mainActivity);
-        List<Question> questions = questionList.getQuestions();
+        CategoryList categoryList = CategoryList.get();
+        List<QuestionList> categories = categoryList.getCategories();
 
-        if (mAdapter == null) {
-            mAdapter = new QuestionAdapter(questions);
-            mQuestionRecyclerView.setAdapter(mAdapter);
-            mQuestionRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(mainActivity));
+        if (mCategoryAdapter == null) {
+            mCategoryAdapter = new CategoryAdapter(categories);
+            mCategoryRecyclerView.setAdapter(mCategoryAdapter);
+            mCategoryRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(mainActivity));
         } else {
-            mAdapter.notifyDataSetChanged();
+            mCategoryAdapter.notifyDataSetChanged();
         }
+    }
+    
+    private class CategoryHolder extends RecyclerView.ViewHolder {
+        private QuestionAdapter mQuestionAdapter;
+        private QuestionList mCategory;
+
+        private RelativeLayout mCategoryLayout;
+        private TextView mCategoryTextView;
+        private ImageView mArrowImage;
+        private RecyclerView mQuestionRecycler;
+
+        public CategoryHolder(View itemView) {
+            super(itemView);
+            Log.d(TAG, "CategoryHolder");
+
+            mCategoryLayout = (RelativeLayout)itemView.findViewById(R.id.list_item_category_layout);
+            mCategoryTextView = (TextView)itemView.findViewById(R.id.list_item_category_text_view);
+            mArrowImage = (ImageView)itemView.findViewById(R.id.list_item_arrow_image);
+            mQuestionRecycler = (RecyclerView)itemView.findViewById(R.id.question_recycler_view2);
+        }
+
+        public void bindCategory(final QuestionList category) {
+            mCategory = category;
+
+            if (mCategory.getCategoryTitleResource() > 0) {
+                mCategoryTextView.setText(mCategory.getCategoryTitleResource());
+            }
+
+            if (mQuestionAdapter == null) {
+                mQuestionAdapter = new QuestionAdapter(mCategory.getQuestions());
+                mQuestionRecycler.setLayoutManager(new LinearLayoutManager(mainActivity));
+                mQuestionRecycler.setAdapter(mQuestionAdapter);
+                mQuestionRecycler.addItemDecoration(new SimpleDividerItemDecoration(mainActivity));
+            } else {
+                mQuestionAdapter.notifyDataSetChanged();
+            }
+
+            updateQuestionVisibility();
+
+            mCategoryLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Set the category's show questions property
+                    category.toggleShowQuestions();
+                    updateQuestionVisibility();
+                }
+            });
+        }
+
+        private void updateQuestionVisibility() {
+            if(mCategory.getShowQuestions()) {
+                mQuestionRecycler.setVisibility(View.VISIBLE);
+                mArrowImage.setImageResource(R.mipmap.up_arrow);
+            } else {
+                mArrowImage.setImageResource(R.mipmap.down_arrow);
+                mQuestionRecycler.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    private class CategoryAdapter extends RecyclerView.Adapter<CategoryHolder> {
+        private List<QuestionList> mCategories;
+
+        public CategoryAdapter(List<QuestionList> Categories) {
+            Log.d(TAG, "CategoryAdapter");
+            mCategories = Categories;
+        }
+
+        @Override
+        public CategoryHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            LayoutInflater layoutInflater = LayoutInflater.from(mainActivity);
+            View view = layoutInflater.inflate(R.layout.list_item_category, parent, false);
+
+            return new CategoryHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(CategoryHolder holder, int position) {
+            Log.d(TAG, "onBindViewHolder");
+            QuestionList category = mCategories.get(position);
+            holder.bindCategory(category);
+        }
+
+        @Override
+        public int getItemCount() {
+            Log.d(TAG, "getItemCount");
+            return mCategories.size();
+        }
+
     }
 
     private class QuestionHolder extends RecyclerView.ViewHolder {
@@ -120,7 +203,7 @@ public class FAQFragment extends Fragment{
                 @Override
                 public void onClick(View v) {
                     // Set the question's show answer property
-                    question.togglShowAnswer();
+                    question.toggleShowAnswer();
                     updateAnswerVisibility();
                 }
             });
