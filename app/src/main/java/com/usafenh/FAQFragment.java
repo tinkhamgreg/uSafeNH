@@ -2,6 +2,7 @@ package com.usafenh;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -105,7 +106,7 @@ public class FAQFragment extends Fragment{
                 mQuestionAdapter = new QuestionAdapter(mCategory.getQuestions());
                 mQuestionRecycler.setLayoutManager(new LinearLayoutManager(mainActivity));
                 mQuestionRecycler.setAdapter(mQuestionAdapter);
-                mQuestionRecycler.addItemDecoration(new SimpleDividerItemDecoration(mainActivity));
+                mQuestionRecycler.addItemDecoration(new AltColorItemDecoration(mainActivity));
             } else {
                 mQuestionAdapter.notifyDataSetChanged();
             }
@@ -275,6 +276,24 @@ public class FAQFragment extends Fragment{
 
                 mDivider.setBounds(left, top, right, bottom);
                 mDivider.draw(c);
+            }
+        }
+    }
+
+    // Used to create dividing lines between questions
+    public class AltColorItemDecoration extends RecyclerView.ItemDecoration {
+        private final int backgroundColor;
+
+        public AltColorItemDecoration(Context context) {
+            backgroundColor = R.color.lightGray;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+            int position = parent.getChildAdapterPosition(view);
+            if (position % 2 == 0) {
+                view.setBackgroundResource(backgroundColor);
             }
         }
     }
