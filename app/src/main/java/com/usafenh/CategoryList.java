@@ -22,6 +22,7 @@ public class CategoryList {
         mCategories.add(CategoryWhatIs.get());
         mCategories.add(CategoryHelpingOthers.get());
         mCategories.add(CategoryCollegePolicy.get());
+        mCategories.add(CategoryMisc.get());
     }
 
     public List<QuestionList> getCategories() {
