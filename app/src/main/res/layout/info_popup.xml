@@ -8,6 +8,7 @@
         android:id="@+id/info_textView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:autoLink="phone"
         android:padding="5dp"/>
 
     <LinearLayout
@@ -15,13 +16,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
-
-        <Button
-            android:id="@+id/call_button"
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Call" />
 
         <Button
             android:id="@+id/cancel_button"
