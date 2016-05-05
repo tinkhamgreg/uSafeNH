@@ -24,7 +24,7 @@
             <ImageView
                 android:layout_width="39dp"
                 android:layout_height="39dp"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/usafe_transparent"
                 android:id="@+id/toolbar_image"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
