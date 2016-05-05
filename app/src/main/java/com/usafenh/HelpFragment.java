@@ -1,6 +1,8 @@
 package com.usafenh;
 
+import android.app.ActionBar;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -88,21 +90,36 @@ public class HelpFragment extends Fragment {
 
         mainActivity.getUserData().setHelpType(buttonResourceID);
 
-        final Dialog infoDialog = new Dialog(mainActivity);
+        final CustomDialog infoDialog = new CustomDialog(mainActivity);
 
-        infoDialog.setContentView(R.layout.info_popup);
         infoDialog.setTitle(mainActivity.getUserData().getHelpType());
 
-        Log.d(TAG, "Info Resource: " + ConstantValues.getInfoReference(mainActivity.getUserData()));
-        ((TextView) infoDialog.findViewById(R.id.info_textView)).setText(ConstantValues.getInfoReference(mainActivity.getUserData()));
-
-        ((Button) infoDialog.findViewById(R.id.cancel_button)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                infoDialog.dismiss();
-            }
-        });
-
         infoDialog.show();
+    }
+
+    public class CustomDialog extends Dialog
+    {
+        public CustomDialog(Context context) {
+            super(context);
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.info_popup);
+
+            getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+
+            Log.d(TAG, "Info Resource: " + ConstantValues.getInfoReference(mainActivity.getUserData()));
+            ((TextView) findViewById(R.id.info_textView)).setText(ConstantValues.getInfoReference(mainActivity.getUserData()));
+            ((TextView) findViewById(R.id.help_title_textView)).setText(mainActivity.getUserData().getHelpType());
+
+            ((Button) findViewById(R.id.cancel_button)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                }
+            });
+        }
     }
 }
