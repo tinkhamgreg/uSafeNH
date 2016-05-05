@@ -4,6 +4,17 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/help_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DialogWindowTitle" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/info_textView"
         android:layout_width="fill_parent"
@@ -20,7 +31,7 @@
         <Button
             android:id="@+id/cancel_button"
             android:layout_weight="1"
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Cancel" />
 

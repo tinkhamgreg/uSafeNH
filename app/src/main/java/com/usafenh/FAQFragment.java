@@ -282,10 +282,12 @@ public class FAQFragment extends Fragment{
 
     // Used to create dividing lines between questions
     public class AltColorItemDecoration extends RecyclerView.ItemDecoration {
-        private final int backgroundColor;
+        private final int backgroundColor1;
+        private final int backgroundColor2;
 
         public AltColorItemDecoration(Context context) {
-            backgroundColor = R.color.lightGray;
+            backgroundColor1 = R.color.lightGray;
+            backgroundColor2 = R.color.lightGray2;
         }
 
         @Override
@@ -293,7 +295,9 @@ public class FAQFragment extends Fragment{
             super.getItemOffsets(outRect, view, parent, state);
             int position = parent.getChildAdapterPosition(view);
             if (position % 2 == 0) {
-                view.setBackgroundResource(backgroundColor);
+                view.setBackgroundResource(backgroundColor1);
+            } else {
+                view.setBackgroundResource(backgroundColor2);
             }
         }
     }

@@ -24,8 +24,14 @@
             <ImageView
                 android:layout_width="39dp"
                 android:layout_height="39dp"
+<<<<<<< HEAD
                 android:background="@drawable/usafe_transparent"
                 android:id="@+id/toolbar_image"
+=======
+                android:background="@mipmap/ic_launcher"
+                android:id="@+id/drawer_layout"
+                android:layout_marginRight="5dp"
+>>>>>>> upstream/master
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
